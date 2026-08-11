@@ -1,0 +1,6 @@
+{
+  "name": "Uangkas",
+  "description": "Aplikasi Pengelolaan Keuangan Organisasi & Bendahara Uangkas",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

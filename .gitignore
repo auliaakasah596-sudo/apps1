@@ -1,4 +1,4 @@
-# Gradle files
+﻿# Gradle files
 .gradle/
 build/
 
@@ -32,3 +32,11 @@ google-services.json
 
 # Android Profiling
 *.hprof
+
+# Node / web build
+node_modules/
+dist/
+coverage/
+.DS_Store
+.env*
+!.env.example

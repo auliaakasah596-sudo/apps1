@@ -1,0 +1,12 @@
+{
+  "appId": "com.uangkas.app",
+  "appName": "Uangkas",
+  "webDir": "dist",
+  "bundledWebRuntime": false,
+  "server": {
+    "androidScheme": "https"
+  },
+  "android": {
+    "allowMixedContent": true
+  }
+}

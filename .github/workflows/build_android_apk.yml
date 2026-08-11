@@ -1,0 +1,63 @@
+name: Build Android APK
+
+on:
+  workflow_dispatch: {}
+  push:
+    branches: ["main", "master"]
+
+jobs:
+  build-apk:
+    runs-on: ubuntu-latest
+    env:
+      JAVA_VERSION: '17'
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Set up Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: ${{ env.JAVA_VERSION }}
+
+      - name: Set up Android SDK
+        uses: r0adkll/setup-android@v2
+        with:
+          api-level: 33
+          target: android-33
+          ndk: ''
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build web assets
+        run: npm run build
+
+      - name: Ensure Capacitor Android
+        run: |
+          if [ ! -d android ]; then
+            npx cap add android
+          fi
+          npx cap sync android
+
+      - name: Build APK (debug)
+        working-directory: android
+        run: ./gradlew assembleDebug --no-daemon
+
+      - name: Find APK and upload artifact
+        run: |
+          set -e
+          apk=$(find android -type f -name "*-debug.apk" | head -n 1)
+          echo "APK found: $apk"
+          mkdir -p out
+          cp "$apk" out/app-debug.apk
+        
+      - name: Upload APK artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: app-debug-apk
+          path: out/app-debug.apk

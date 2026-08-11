@@ -1,0 +1,21 @@
+{
+  "short_name": "Uangkas",
+  "name": "Uangkas - Keuangan Kas Organisasi",
+  "icons": [
+    {
+      "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuAZHv36g-8F_2mk1pto9CC2FZME1O4Do8SUa1y4VG8wFs8wpjsLRvD1EAXr60h4dwXEXuIidsK3Iut4n9_8iQVgrVuEdseRXqxhtQnkVCaI3q9AvJ0l9Db4qBuzrUdA9edaApyYFdNxMX8SIVueZgv3V-6I3J5kQDNsHaHtNwCqA-qD3-AJLh4bkwoRJw1JQqDimR6WEtbYMcv-MY045GvE6h2EEpb1ayEtO56kHo8eUM2hiDwoIL5a",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuAZHv36g-8F_2mk1pto9CC2FZME1O4Do8SUa1y4VG8wFs8wpjsLRvD1EAXr60h4dwXEXuIidsK3Iut4n9_8iQVgrVuEdseRXqxhtQnkVCaI3q9AvJ0l9Db4qBuzrUdA9edaApyYFdNxMX8SIVueZgv3V-6I3J5kQDNsHaHtNwCqA-qD3-AJLh4bkwoRJw1JQqDimR6WEtbYMcv-MY045GvE6h2EEpb1ayEtO56kHo8eUM2hiDwoIL5a",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#f8f9ff",
+  "theme_color": "#0f172a",
+  "display": "standalone",
+  "orientation": "portrait"
+}
